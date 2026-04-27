@@ -34,22 +34,15 @@ class Context(object):
         self._duration = timedelta(seconds=timeout_in_seconds)
 
     def get_remaining_time_in_millis(self):
-        if self._timelimit is None:
-            raise Exception("Context not activated.")
-        return millis_interval(datetime.now(), self._timelimit)
+        pass
 
     def log(self, msg):
-        print(msg)
+        pass
 
     def _activate(self):
-        self._timelimit = datetime.now() + self._duration
-        return self
+        pass
 
 
 def millis_interval(start, end):
     """start and end are datetime instances"""
-    diff = end - start
-    millis = diff.days * 24 * 60 * 60 * 1000
-    millis += diff.seconds * 1000
-    millis += diff.microseconds / 1000
-    return millis
+    pass
